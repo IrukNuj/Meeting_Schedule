@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+        RAILS_DATABASE_PASSWORD: password
+        DATABASE_URL: mysql2://root:password@mysql:3306
+    # デフォルトコマンドを上書きする
+    command: ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "0.0.0.0"]
+    # 3000番ポートを公開しアクセス可能にする
+    ports:
+      - '3000:3000'
+    # ホストのカレントディレクトリを/book_seeker配下にマウントする
+    volumes:
+      - .:/book_seeker
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:8.0.18
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql-data:/var/lib/mysql
+volumes:
+  mysql-data:
+    driver: local
