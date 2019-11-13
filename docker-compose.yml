@@ -12,7 +12,7 @@ services:
       - '3000:3000'
     # ホストのカレントディレクトリを/book_seeker配下にマウントする
     volumes:
-      - .:/book_seeker
+      - .:/meeting_schedule_volume
     depends_on:
       - mysql
   mysql:
