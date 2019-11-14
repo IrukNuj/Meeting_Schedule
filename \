@@ -1,0 +1,58 @@
+:sparkles: Create user, schedule, assosiation models.
+# ==== Emojis ====
+# ✏️  :pencil2: Writing docs
+# 🐛  :bug: Fix bugs
+# 👍  :+1: Feature improvements
+# ✨  :sparkles: Additional partial feature
+# 🎉  :tada: Grand major features added to celebrate
+# ♻️   :recycle :Refactoring
+# 🚿  :shower: Removal of obsolete functions or features.
+# 💚  :green_heart: Modification and improvement of testing and CI
+# 👕  :shirt: Fixing of errors found by Lint.
+# 🚀  :rocket: Performance improvement
+# 🆙  :up: Updates, such as dependent package
+# 🔒  :lock: Limit of the range of new features
+# 👮  :cop: Security-related improvements
+
+# ==== Format ====
+# :emoji: Subject #issue No.
+#
+# Commit body...
+
+# ==== The Seven Rules ====
+# 1. Separate subject from body with a blank line
+# 2. Limit the subject line to 50 characters
+# 3. Capitalize the subject line
+# 4. Do not end the subject line with a period
+# 5. Use the imperative mood in the subject line
+# 6. Wrap the body at 72 characters
+# 7. Use the body to explain what and why vs. how
+#
+# How to Write a Git Commit Message http://chris.beams.io/posts/git-commit/
+
+# for http://memo.goodpatch.co/2016/07/beautiful-commits-with-emojis/
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch feature-1
+# Changes to be committed:
+#	modified:   Gemfile
+#	modified:   Gemfile.lock
+#	new file:   app/models/schedule.rb
+#	new file:   app/models/schedule_user.rb
+#	new file:   app/models/user.rb
+#	new file:   config/initializers/devise.rb
+#	new file:   config/locales/devise.en.yml
+#	modified:   config/routes.rb
+#	new file:   db/migrate/20191114135137_create_schedules.rb
+#	new file:   db/migrate/20191114135513_devise_create_users.rb
+#	new file:   db/migrate/20191114140420_create_schedule_users.rb
+#	new file:   db/schema.rb
+#	new file:   spec/factories/schedule_users.rb
+#	new file:   spec/factories/schedules.rb
+#	new file:   spec/factories/users.rb
+#	new file:   spec/models/schedule_spec.rb
+#	new file:   spec/models/schedule_user_spec.rb
+#	new file:   spec/models/user_spec.rb
+#
