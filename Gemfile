@@ -61,3 +61,5 @@ group :development, :test do
   gem 'annotate'
   gem 'rails_best_practices'
 end
+
+gem 'devise'
