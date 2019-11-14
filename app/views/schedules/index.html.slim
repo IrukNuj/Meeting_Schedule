@@ -1,4 +1,13 @@
-h1
-  | Schedules#index
-p
-  | Find me in app/views/schedules/index.html.erb
+h1 スケジュール一覧
+
+.mb-3
+  table.table.table-hover
+    thead.thead-default
+      tr
+        th date
+        th agenda
+      tbody
+        - @schedules.each do |schedule|
+          tr
+            td= schedule.date
+            td= schedule.agenda

@@ -1,4 +1,10 @@
-h1
-  | Schedules#new
-p
-  | Find me in app/views/schedules/new.html.erb
+h1 ミーティング予定の新規登録
+
+= form_with model: @schedule, local: true do |f|
+  .form-group
+    = f.label :date
+    = f.date_field :date, class: 'form-control', id: 'date'
+  .form-group
+    = f.label :agenda
+    = f.text_field :agenda, class: 'form-control', id: 'agenda'
+  = f.submit nil, class: 'btn btn-primary'
