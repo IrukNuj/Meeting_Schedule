@@ -64,3 +64,5 @@ end
 
 gem 'devise'
 gem 'bootstrap'
+gem 'slim-rails'
+gem 'html2slim'
