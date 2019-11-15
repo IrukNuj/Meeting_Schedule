@@ -1,0 +1,8 @@
+= form_with model: @schedule_user, local: true do |f|
+  .form-group
+    = f.label :status
+    = f.select :status, ScheduleUser.statuses.values.to_a, class: 'form-control', id: 'status'
+  .form-group
+    = f.label :reason
+    = f.text_field :reason, class: 'form-control', id: 'reason'
+  = f.submit nil, class: 'btn btn-primary'
