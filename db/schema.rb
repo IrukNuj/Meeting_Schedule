@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_14_140420) do
+ActiveRecord::Schema.define(version: 2019_11_15_162611) do
 
-  create_table "schedule_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "absentees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "schedule_id", null: false
     t.integer "status", null: false
     t.text "reason"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["schedule_id"], name: "index_schedule_users_on_schedule_id"
-    t.index ["user_id"], name: "index_schedule_users_on_user_id"
+    t.index ["schedule_id"], name: "index_absentees_on_schedule_id"
+    t.index ["user_id"], name: "index_absentees_on_user_id"
   end
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 2019_11_14_140420) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "schedule_users", "schedules"
-  add_foreign_key "schedule_users", "users"
+  add_foreign_key "absentees", "schedules"
+  add_foreign_key "absentees", "users"
 end
