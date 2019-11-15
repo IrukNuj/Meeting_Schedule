@@ -1,4 +1,15 @@
 h1
-  | Schedules#show
-p
-  | Find me in app/views/schedules/show.html.erb
+  = @schedule.date
+  | の予定
+
+.mb-3
+  table.table.table-hover
+    thead.thead-defaul
+      tr
+        td アジェンダ内容
+        td= @schedule.agenda
+      tr
+        - @schedule.schedule_users.each do |user|
+          tr
+            td= user.user_id
+            td= user.reason
