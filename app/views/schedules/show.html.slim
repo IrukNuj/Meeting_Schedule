@@ -9,7 +9,7 @@ h1
         td アジェンダ内容
         td= @schedule.agenda
       tr
-        - @schedule.schedule_users.each do |user|
+        - @schedule.absentees.each do |user|
           tr
             td= user.user_id
             td= user.reason
