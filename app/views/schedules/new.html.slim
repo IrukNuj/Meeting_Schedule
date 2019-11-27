@@ -6,5 +6,5 @@ h1 ミーティング予定の新規登録
     = f.date_field :date, class: 'form-control', id: 'date'
   .form-group
     = f.label :agenda
-    = f.text_field :agenda, class: 'form-control', id: 'agenda'
+    = f.text_area :agenda, class: 'form-control', id: 'agenda'
   = f.submit nil, class: 'btn btn-primary'

@@ -1,6 +1,6 @@
 class Api::V1::SchedulesController < ApplicationController
   def index
-    schedules = Schedule.all
+    schedules = Schedule.order(date: :desc)
     render json: schedules
   end
 
@@ -13,6 +13,8 @@ class Api::V1::SchedulesController < ApplicationController
     schedule = Schedule.new(schedule_params)
     if schedule.save
       render status: :created, json: { code: 201, message: 'Created' }
+    else
+      render status: 400, json: { code: 400, message: schedule.errors }
     end
   end
 
