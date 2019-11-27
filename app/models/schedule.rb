@@ -3,6 +3,7 @@ class Schedule < ApplicationRecord
   has_many :users, through: :absentees
 
   validates :date, presence: true, uniqueness: true
+  validates :agenda, presence: true
 
   before_create do
     schedule_date = Date.parse(date.to_s)
